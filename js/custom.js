@@ -80,3 +80,36 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(updateText, 2000); // Change text every 2 seconds
     updateText(); // Initialize the first text
 });
+
+
+/* filepath: js/custom.js */
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("contact-name").value.trim();
+        const email = document.getElementById("contact-email").value.trim();
+        const subject = document.getElementById("contact-subject").value.trim();
+        const message = document.getElementById("contact-message").value.trim();
+
+        if (!name || !email || !subject || !message) {
+            alert("Please fill out all fields.");
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        alert("Thank you for your message! I will get back to you soon.");
+        form.reset();
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+});

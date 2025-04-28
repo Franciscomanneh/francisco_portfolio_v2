@@ -14,4 +14,4 @@ It showcases my skills, projects, and experience as a **Web Developer** and **IT
 This site can be hosted on **GitHub Pages** or **Hostinger**.
 
 ## Contact
-Email: isatousanna35@gmail.com)  
+Email: isatousanna35@gmail.com

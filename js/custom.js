@@ -113,3 +113,17 @@ document.addEventListener("DOMContentLoaded", function () {
         return re.test(email);
     }
 });
+
+
+// Add hover effect for cards for my services
+document.querySelectorAll('#services .grid div').forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+        card.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.2)';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+        card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.1)';
+    });
+});
